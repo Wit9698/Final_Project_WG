@@ -84,7 +84,9 @@
 
         <!-- Sidebar Toggler (Sidebar) -->
         <div class="text-center d-none d-md-inline">
-            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            <form action="<c:url value="/logout"/>" method="post">
+                <input class="rounded-circle border-0" type="submit"value="Wyloguj">
+                <input type="hidden"name="${_csrf.parameterName}"value="${_csrf.token}"/></form>
         </div>
 
     </ul>

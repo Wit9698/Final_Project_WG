@@ -28,10 +28,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/home", "/").hasAnyRole("USER", "ADMIN")
                 .antMatchers("/client/**").hasAnyRole("USER", "ADMIN")
+                .antMatchers("/search/**").hasAnyRole("USER", "ADMIN")
                 .antMatchers("/vehicle/**").hasAnyRole("USER", "ADMIN")
                 .antMatchers("/insurance/**").hasAnyRole("USER", "ADMIN")
                 .and().formLogin().loginPage("/login")
-                .and().logout().logoutSuccessUrl("/")
+                .and().logout().logoutSuccessUrl("/home")
                 .permitAll();
     }
 

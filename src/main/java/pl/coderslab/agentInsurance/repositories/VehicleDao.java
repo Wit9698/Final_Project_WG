@@ -43,5 +43,9 @@ public class VehicleDao {
         query.setParameter("id", id);
         return query.getResultList();
     }
-
+    public List<Vehicle> findByPlate(String plateNumber) {
+        Query query = entityManager.createQuery("SELECT b FROM Vehicle b where b.plateNumber =: plateNumber");
+        query.setParameter("plateNumber", plateNumber);
+        return query.getResultList();
+    }
 }

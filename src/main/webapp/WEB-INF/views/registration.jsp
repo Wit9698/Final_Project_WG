@@ -52,14 +52,14 @@
                                     <form:errors path="username" element="div"/>
                                 </div>
                             </div>
-                            <hr class="form-group row">
+                            <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <label>Password:</label>
                                     <form:errors path="password" element="div"  />
                                     <form:password path="password" class="form-control form-control-user" placeholder="Password "/>
                                 </div>
-                                <hr>
-                                <button type="submit" class="btn btn-primary">Zapisz</button>
+                            </div>
+                                <button type="submit" class="btn btn-primary">Save</button>
                                 </hr>
                                 </form:form>
                         <div class="text-center">

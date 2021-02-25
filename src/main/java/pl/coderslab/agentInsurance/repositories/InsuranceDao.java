@@ -43,5 +43,9 @@ public class InsuranceDao {
         query.setParameter("id", id);
         return query.getResultList();
     }
-
+    public List<Insurance> findByNumber(String insuranceNumber) {
+        Query query = entityManager.createQuery("SELECT b FROM Insurance b where b.insuranceNumber =: insuranceNumber");
+        query.setParameter("insuranceNumber", insuranceNumber);
+        return query.getResultList();
+    }
 }

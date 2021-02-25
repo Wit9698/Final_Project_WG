@@ -40,7 +40,7 @@ public class ClientDao {
         return query.getResultList();
     }
 
-    public List<Vehicle> findByEmail(String email) {
+    public List<Client> findByEmail(String email) {
         Query query = entityManager.createQuery("SELECT b FROM Client b where b.email =: ema");
         query.setParameter("ema", email);
         return query.getResultList();
